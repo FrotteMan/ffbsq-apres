@@ -12,10 +12,12 @@ include 'menu.php';
     <h2 class="text-center">Gestion des Paliers</h2>
 
     <?php
-    $pdo = new PDO('mysql:host=localhost;dbname=ffbsq_competitions', 'root', 'root');
+    //$pdo = new PDO('mysql:host=localhost;dbname=ffbsq_competitions', 'root', 'root');
 
-    $sql = $pdo->query("SELECT * FROM palier ORDER BY nbr_pts_minimum_palier ASC");
-    $paliers = $sql->fetchAll();
+    //$sql = $pdo->query("SELECT * FROM palier ORDER BY nbr_pts_minimum_palier ASC");
+    //$paliers = $sql->fetchAll();
+	$json = file_get_contents('http://localhost/mon-api/api-palier.php')
+	$paliers = json_decode($json, true);
     ?>
 
     <table class="table table-hover">
