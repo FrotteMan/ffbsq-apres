@@ -16,7 +16,7 @@ include 'menu.php';
 
     //$sql = $pdo->query("SELECT * FROM palier ORDER BY nbr_pts_minimum_palier ASC");
     //$paliers = $sql->fetchAll();
-	$json = file_get_contents('http://localhost/mon-api/api-palier.php')
+	$json = file_get_contents('http://localhost/mon-api/api-palier.php');
 	$paliers = json_decode($json, true);
     ?>
 
